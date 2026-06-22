@@ -13,6 +13,8 @@ const categories = [
   "Grocery",
 ];
 
+const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 function App() {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("All");
@@ -39,7 +41,7 @@ function App() {
       if (cat && cat !== "All") params.append("category", cat);
       if (cursor) params.append("cursor", cursor);
 
-      const res = await fetch(`http://localhost:5000/api/products?${params.toString()}`);
+      const res = await fetch(`https://codevector-5b66.onrender.com/api/products?${params.toString()}`);
       const data = await res.json();
 
       if (data.success) {
