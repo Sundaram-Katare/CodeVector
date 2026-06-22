@@ -217,8 +217,6 @@ Given more time, I would add:
 * Redis caching for popular queries.
 * Cursor signing/encryption to prevent tampering.
 * Docker support.
-* Query performance benchmarking.
-* API documentation using Swagger/OpenAPI.
 
 ---
 
